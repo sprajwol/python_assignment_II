@@ -17,3 +17,5 @@ def is_leap(year):
 
 
 input_year = int(input("Enter a year:"))
+
+is_leap(input_year)
