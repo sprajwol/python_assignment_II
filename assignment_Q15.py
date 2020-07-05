@@ -10,6 +10,7 @@ class Customer:
         self.address = ''
         self.contact = ''
         self.account_number = ''
+        self.balance = ''
 
     def get_customer_info(self):
         print(self.first_name)
@@ -24,3 +25,15 @@ class Customer:
         self.address = input("Enter address:")
         self.contact = input("Enter contact number:")
         self.account_number = input("Enter account number:")
+
+    def deposit(self, amount):
+        print("Deposit success")
+        self.balance = self.balance + amount
+
+    def withdraw(self, amount):
+        if (self.balance > amount):
+            print("Withraw success")
+            self.balance = self.balance - amount
+
+    def checkbalance(self):
+        print(f"Balance: {self.balance}")
